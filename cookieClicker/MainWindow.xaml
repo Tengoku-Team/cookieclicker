@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cookieClicker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="252.666" Width="204.111">
     <Grid>
-        
+        <Label x:Name="cookiesLabel" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.8,0.321"/>
+        <Image x:Name="cookie" HorizontalAlignment="Left" Margin="9,35,0,10" Width="177" MouseDown="cookie_MouseDown" Stretch="UniformToFill" Cursor="Hand" Source="Resources/cookie.png"/>
+
     </Grid>
 </Window>
