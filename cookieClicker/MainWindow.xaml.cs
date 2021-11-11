@@ -13,16 +13,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace cookieClicker
-{
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
+namespace cookieClicker {
+    public partial class MainWindow : Window {
+
+        variables gameData = new variables(100); // calling contructor
+
+        public MainWindow() {
             InitializeComponent();
+
+            cookiesLabel.Content = gameData.getCookies(); // set value of cookies to label
+        }
+
+        private void cookie_MouseDown(object sender, MouseButtonEventArgs e) {
+            gameData.setCookies(gameData.getCookies() + 1); // increment value of cookies
+            cookiesLabel.Content = gameData.getCookies(); // updating label
         }
     }
 }
